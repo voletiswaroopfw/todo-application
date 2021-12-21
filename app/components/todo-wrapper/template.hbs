@@ -1,0 +1,11 @@
+<form>
+  {{input
+  type="text"
+  id="new-todo"
+  placeholder="What needs to be done?"
+  value=addtodo}}
+
+  <span {{action "addTodoItem"}}>Add</span>
+</form>
+
+{{todo-list todoList=model}}

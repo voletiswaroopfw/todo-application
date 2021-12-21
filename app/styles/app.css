@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.todo-wrapper {
+  background-color: #f4f2f3;
+  padding: 30px;
+  max-width: 1280px;
+  margin: auto;
+}
+#new-todo {
+  width: 60vw;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.todo-container {
+  background: #fff;
+  margin: 30px 0 15px;
+  max-height: 290px;
+  overflow-y: auto;
+}
+
+.todo-container h4 {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+
+.todo-list {
+  padding: 0 20px;
+}
+.todo-list > div {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+form span {
+  padding: 10px 60px;
+  background: #105aff;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.list-item > div {
+  display: flex;
+}
+.list-item .identifier {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  display: inline-block;
+  background-color: #ffe4d3;
+  margin: 0 10px;
+  border: 1px solid #ffccb3;
+}
+.list-item label {
+  text-transform: capitalize;
+}
+.list-item.true label {
+  text-decoration: line-through;
+}
+.list-item.true .identifier {
+  background-color: #edffd9;
+  border: 1px solid #ace788;
+}
+.list-item .ember-checkbox {
+  width: 20px;
+  height: 16px;
+}
+.list-item .remove-item {
+  padding: 5px 10px;
+  border: 0;
+  cursor: pointer;
+}
+.filters {
+  margin: 20px 0 20px;
+}
+.footer-tabs li {
+  display: inline-block;
+}
+.footer-tabs li a {
+  padding: 10px 60px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-tabs li .selected {
+  background: #105aff;
+  color: #fff;
+}
