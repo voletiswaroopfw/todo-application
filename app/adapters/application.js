@@ -1,8 +1,9 @@
-import DS from 'ember-data';
+import DS from "ember-data";
+import ApiData from "../config/hosts";
 
 export default DS.JSONAPIAdapter.extend({
-    host: 'https://jsonplaceholder.typicode.com',
-    init() {
-        this._super(...arguments);
-    }
+  host: ApiData.API_URL,
+  init() {
+    this._super(...arguments);
+  },
 });

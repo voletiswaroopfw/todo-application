@@ -1,11 +1,11 @@
-<form>
+<div class="create-todo-wrapper">
   {{input
-  type="text"
-  id="new-todo"
-  placeholder="What needs to be done?"
-  value=addtodo}}
+    type="text"
+    id="new-todo"
+    placeholder="What needs to be done?"
+    value=addtodo
+  }}
 
-  <span {{action "addTodoItem"}}>Add</span>
-</form>
-
+  <span class="add-todo" {{action "addTodoItem"}}>Add</span>
+</div>
 {{todo-list todoList=model}}

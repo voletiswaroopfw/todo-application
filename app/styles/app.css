@@ -39,7 +39,7 @@
   border-bottom: 1px solid #ccc;
 }
 
-form span {
+.add-todo {
   padding: 10px 60px;
   background: #105aff;
   color: #fff;
