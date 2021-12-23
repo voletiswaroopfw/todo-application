@@ -5,5 +5,5 @@ export default Model.extend({
   userId: attr('number'),
   title: attr('string'),
   completed: attr('boolean'),
-  todoList: belongsTo('todoItem')
+  todoList: belongsTo('todos')
 });

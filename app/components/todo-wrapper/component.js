@@ -1,5 +1,6 @@
 import Ember from "ember";
 const {
+  getProperties,
   inject: { service },
 } = Ember;
 export default Ember.Component.extend({
@@ -7,15 +8,17 @@ export default Ember.Component.extend({
 
   actions: {
     addTodoItem() {
-      let newItem = this.get('addtodo');
-      if (!newItem.trim()) { return; }
-      let store = this.get('store') 
-      let todo = store.createRecord('todos', {
-        title: newItem,
-        completed: false
+      let newTodo = this.get("addtodo");
+      if (!newTodo.trim()) {
+        return;
+      }
+      let { store } = getProperties(this, "store");
+      let todoItem = store.createRecord("todos", {
+        title: newTodo,
+        completed: false,
       });
-      this.set('addtodo', '');
-      //  todo.save();
-    }
+      this.set("addtodo", "");
+      todoItem.save();
+    },
   },
 });
