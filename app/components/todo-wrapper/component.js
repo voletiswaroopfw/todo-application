@@ -12,13 +12,18 @@ export default Ember.Component.extend({
       if (!newTodo.trim()) {
         return;
       }
-      let { store } = getProperties(this, "store");
-      let todoItem = store.createRecord("todos", {
-        title: newTodo,
-        completed: false,
+      this.get('store').push({
+        data: [{
+          id: 200+this.incrementProperty('i'),
+          type: 'todos',
+          attributes: {
+            title: newTodo,
+            completed: false,
+          },
+          relationships: {}
+        }]
       });
       this.set("addtodo", "");
-      todoItem.save();
     },
   },
 });
