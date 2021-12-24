@@ -1,6 +1,5 @@
 import Ember from "ember";
 const {
-  getProperties,get,
   inject: { service },
 } = Ember;
 export default Ember.Controller.extend({
@@ -9,11 +8,11 @@ export default Ember.Controller.extend({
   actions: {
     addTodoItem() {
       let inputTodoValue = this.get("addtodo");
-      if (!inputTodoValue.trim()) {
+      if (inputTodoValue == '') {
         return;
       }
-      this.get('store').createRecord('todos', {
-        id: 200+this.incrementProperty('i'),
+      this.get("store").createRecord("todos", {
+        id: 200 + this.incrementProperty("i"),
         title: inputTodoValue,
         completed: false,
       });
