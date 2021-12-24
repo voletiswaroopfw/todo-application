@@ -1,8 +1,15 @@
 <div class="todo-container">
   <h4>Todo List</h4>
   <ul class="todo-list">
-    {{#each todoList as |item|}}
-      {{todo-list-item item=item}}
+    {{#each model as |item|}}
+      <li class="list-item {{item.completed}}">
+        <div>
+          {{input type="checkbox" checked=item.completed}}
+          <span class="identifier"></span>
+          <label>{{item.title}}</label>
+        </div>
+        <button class="remove-item" {{action "removeTodo" item}}></button>
+      </li>
     {{/each}}
   </ul>
 </div>
