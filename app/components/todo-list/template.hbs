@@ -3,12 +3,7 @@
   <ul class="todo-list">
     {{#each model as |item|}}
       <li class="list-item {{item.completed}}">
-        <div>
-          {{input type="checkbox" checked=item.completed}}
-          <span class="identifier"></span>
-          <label>{{item.title}}</label>
-        </div>
-        <button class="remove-item" {{action "removeTodo" item}}></button>
+        {{todo-list-item item=item}}
       </li>
     {{/each}}
   </ul>

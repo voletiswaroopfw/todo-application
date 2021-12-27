@@ -1,8 +1,6 @@
-<div class="list-item {{item.completed}}">
-  <div>
-    {{input type="checkbox" checked=item.completed}}
-    <span class="identifier"></span>
-    <label>{{item.title}}</label>
-  </div>
-  <button class="remove-item" {{action "removeTodo"}}></button>
+<div class="item-label">
+  {{input type="checkbox" checked=item.completed}}
+  <span class="identifier"></span>
+  <label>{{item.title}}</label>
 </div>
+<button class="remove-item" {{action "removeTodo" item}}>Delete</button>

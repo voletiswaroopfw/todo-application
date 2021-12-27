@@ -1,18 +1,4 @@
-import Ember from "ember";
-const {
-  get,
-  set,
-  getProperties,
-  inject: { service },
-  computed,
-} = Ember;
+import Ember from "ember"; 
 
 export default Ember.Component.extend({
-  store: service(),
-  actions: {
-    removeTodo() {
-      let { item } = getProperties(this, "item"); 
-      item.deleteRecord();
-    },
-  },
 });

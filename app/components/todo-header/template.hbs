@@ -1,0 +1,11 @@
+<div class="create-todo-wrapper">
+  {{input
+    type="text"
+    id="new-todo"
+    placeholder="What needs to be done?"
+    value=addtodo
+  }}
+
+  {{!-- {{global-button addTodoItem=addTodoItem }} --}}
+  <span class="add-todo" {{action "addTodoItem"}}>Add</span>
+</div>

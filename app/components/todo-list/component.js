@@ -1,7 +1,5 @@
 import Ember from "ember";
 const {
-  get,
-  set,
   getProperties,
   inject: { service },
   computed,
@@ -10,10 +8,9 @@ const {
 export default Ember.Component.extend({
   store: service(),
   actions: {
-    removeTodo(item) {
-      // let { item } = getProperties(this, "item"); 
+    removeTodo() {
+      let { item } = getProperties(this, "item"); 
       item.deleteRecord();
-      // get(this,'model').save();
     },
   },
 });

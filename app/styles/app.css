@@ -19,7 +19,7 @@
 .todo-container {
   background: #fff;
   margin: 30px 0 15px;
-  max-height: 290px;
+  max-height: 325px;
   overflow-y: auto;
 }
 
@@ -48,12 +48,15 @@
   cursor: pointer;
 }
 .list-item {
+  list-style: none;
+}
+.list-item > div,
+.list-item .item-label {
   display: flex;
-  justify-content: space-between;
-  align-items: start;
+  align-items: center;
 }
 .list-item > div {
-  display: flex;
+  justify-content: space-between;
 }
 .list-item .identifier {
   width: 15px;

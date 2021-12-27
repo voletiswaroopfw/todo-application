@@ -1,16 +1,5 @@
 <div class="todo-wrapper">
-  <div class="create-todo-wrapper">
-    {{input
-      type="text"
-      id="new-todo"
-      placeholder="What needs to be done?"
-      value=addtodo
-    }}
-
-    <span class="add-todo" {{action "addTodoItem"}}>Add</span>
-  </div>
-  {{!-- {{#if model.length}} --}}
-    {{outlet}}
-    {{todo-footer model=model}}
-  {{!-- {{/if}} --}}
+  {{todo-header}}
+  {{outlet}}
+  {{todo-footer model=model}}
 </div>
