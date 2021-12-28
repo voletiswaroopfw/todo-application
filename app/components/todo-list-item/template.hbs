@@ -1,6 +1,6 @@
-<div class="item-label">
-  {{input type="checkbox" checked=item.completed}}
+<div class="item-label {{listItem.completed}}">
+  <input type="checkbox" checked={{listItem.completed}} onchange={{action  "toggleCompleted"}} />
   <span class="identifier"></span>
-  <label>{{item.title}}</label>
+  <label>{{listItem.title}}</label>
 </div>
-<button class="remove-item" {{action "removeTodo" item}}>Delete</button>
+<button class="remove-item" {{action "removeTodo" listItem}}>Delete</button>
