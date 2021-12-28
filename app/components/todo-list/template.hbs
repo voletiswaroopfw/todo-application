@@ -1,7 +1,7 @@
 <div class="todo-container">
   <h4>Todo List</h4>
   <ul class="todo-list">
-    {{#each model as |item|}}
+    {{#each modelData as |item|}}
       <li class="list-item {{item.completed}}">
         {{todo-list-item item=item}}
       </li>
