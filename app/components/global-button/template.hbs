@@ -1,7 +1,7 @@
 {{#if addItem}}
-  <span class={{customclass}} class={{customclass}} onclick={{action "saveAction"}}>{{label}}</span>
+  <span class={{customclass}} onclick={{action "saveAction"}}>{{label}}</span>
 {{/if}}
 
-{{#if removeItem}}
+{{#if removeTodo}}
   <button class={{customclass}} onclick={{action "removeItem"}}>{{label}}</button>
 {{/if}}
