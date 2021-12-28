@@ -1,1 +1,7 @@
-<span class="add-todo" {{action "saveAction"}}>Add</span>
+{{#if addItem}}
+  <span class={{customclass}} class={{customclass}} onclick={{action "saveAction"}}>{{label}}</span>
+{{/if}}
+
+{{#if removeItem}}
+  <button class={{customclass}} onclick={{action "removeItem"}}>{{label}}</button>
+{{/if}}

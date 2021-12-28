@@ -6,6 +6,5 @@
     value=addtodo
   }}
 
-  {{!-- {{global-button addTodoItem=addTodoItem }} --}}
-  <span class="add-todo" {{action "addTodoItem"}}>Add</span>
+  {{global-button addItem=(action "addTodoItem") label="Add" customclass="add-item"}}
 </div>

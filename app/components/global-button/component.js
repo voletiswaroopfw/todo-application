@@ -3,7 +3,10 @@ import Ember from "ember";
 export default Ember.Component.extend({
   actions: {
     saveAction() {
-      this.get("addTodoItem");
+      this.addItem();
     },
+    removeItem(){
+      this.removeTodo();
+    }
   },
 });
