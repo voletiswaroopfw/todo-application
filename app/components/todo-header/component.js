@@ -12,7 +12,7 @@ export default Ember.Component.extend({
       if (inputTodoValue == '') {
         return;
       }
-      this.get("store").createRecord("todos", {
+      this.get("store").createRecord("todo", {
         id: 200 + this.incrementProperty("i"),
         title: inputTodoValue,
         completed: false,
