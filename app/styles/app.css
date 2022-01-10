@@ -27,13 +27,15 @@
   max-height: 325px;
   overflow-y: auto;
 }
-
-.todo-container h4 {
+.title-container {
+  display: flex;
   padding: 20px;
   border-bottom: 1px solid #ccc;
   position: sticky;
   top: 0;
   background: #fff;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .todo-list {

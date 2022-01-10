@@ -1,5 +1,8 @@
 <div class="todo-container">
-  <h4>Todo List</h4>
+  <div class="title-container">
+    <h4>Todo List</h4>
+    <p><input type="checkbox" onchange={{action "toggleAll"}} /> Toggle all</p>
+  </div>
   <ul class="todo-list">
     {{#each modelData as |item|}}
       <li class="list-item {{item.completed}}">
