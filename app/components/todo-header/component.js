@@ -15,7 +15,6 @@ export default Ember.Component.extend({
     addTodoItem() {
       let inputTodoValue = this.get("addtodo");
       let selectedValue = this.get("selectedValue");
-      console.log(selectedValue);
       if (inputTodoValue == "") {
         return;
       }

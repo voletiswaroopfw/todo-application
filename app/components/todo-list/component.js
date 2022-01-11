@@ -4,6 +4,12 @@ const { set, getProperties, setProperties, computed, get } = Ember;
 export default Ember.Component.extend({
   modelData: [],
 
+  markEveryItemsCompleted: computed("model.@each.completed", {
+    get() {
+      return get(this, "model").isEvery("completed");
+    },
+  }),
+
   showDataInReverse: computed("model.@each.id", {
     get() {
       return get(this, "model").toArray().reverse();
@@ -22,16 +28,9 @@ export default Ember.Component.extend({
     },
   }),
 
-  sortByStatusCompleted: computed("sortByStatusPending", {
+  sortByStatusCompleted: computed("model.@each.completed", {
     get() {
-      let { sortByStatusPending } = getProperties(this, "sortByStatusPending");
-      return sortByStatusPending.reverse();
-    },
-  }),
-
-  markEveryItemsCompleted: computed("model.@each.completed", {
-    get() {
-      return get(this, "model").isEvery("completed");
+      return get(this, "model").toArray().sortBy("completed").reverse();
     },
   }),
 
