@@ -41,8 +41,9 @@
 .todo-list {
   padding: 0 20px;
 }
-.todo-list li {
+.todo-list .list-item {
   padding: 20px 0;
+  width: 100%;
   border-bottom: 1px solid #ccc;
 }
 
@@ -52,6 +53,16 @@
   color: #fff;
   border-radius: 5px;
   margin-left: 20px;
+  cursor: pointer;
+}
+select {
+  width: 150px;
+  height: 38px;
+  margin-left: 20px;
+}
+.title-container li {
+  list-style: none;
+  display: inline-block;
   cursor: pointer;
 }
 .list-item {

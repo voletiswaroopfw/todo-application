@@ -11,12 +11,6 @@
     </li>
   </ul>
 </div>
-
-{{!-- {{getItemsCount}}
-Total todo items
-
-{{getPendingItemsCount}}
-Pending items
-
-{{getCompletedItemsCount}}
-Completed items --}}
+{{#if getPendingItemsCount}}
+  {{getPendingItemsCount}} Pending items
+{{/if}}

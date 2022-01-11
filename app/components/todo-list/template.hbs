@@ -1,6 +1,13 @@
 <div class="todo-container">
   <div class="title-container">
     <h4>Todo List</h4>
+    <ul onclick={{action "sortList"}}>
+      <li><b>Sort By:</b></li>
+      <li data-action="showDataInReverse">ID |</li>
+      <li data-action="sortByTitle">Title |</li>
+      <li data-action="sortByStatusPending">Pending |</li>
+      <li data-action="sortByStatusCompleted">Completed</li>
+    </ul>
     <p><input type="checkbox" onchange={{action "toggleAll"}} /> Toggle all</p>
   </div>
   <ul class="todo-list">
