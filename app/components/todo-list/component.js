@@ -2,7 +2,11 @@ import Ember from "ember";
 const { set, getProperties, setProperties, computed, get } = Ember;
 
 export default Ember.Component.extend({
-  modelData: [],
+  modelData: computed("model.@each.id", {
+    get() {
+      return get(this, "model").toArray().reverse();
+    },
+  }),
 
   markEveryItemsCompleted: computed("model.@each.completed", {
     get() {
@@ -12,7 +16,7 @@ export default Ember.Component.extend({
 
   showDataInReverse: computed("model.@each.id", {
     get() {
-      return get(this, "model").toArray().reverse();
+      return get(this, "model").toArray();
     },
   }),
 
@@ -36,8 +40,6 @@ export default Ember.Component.extend({
 
   init() {
     this._super(...arguments);
-    let { showDataInReverse } = getProperties(this, "showDataInReverse");
-    setProperties(this, { modelData: showDataInReverse });
   },
 
   actions: {
