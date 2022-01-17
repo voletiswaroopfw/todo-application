@@ -1,9 +1,13 @@
 <div class="todo-container">
+  <div class="seach-item">
+    <input type="text" class="search-todo" placeholder="Search todo" onkeydown={{action "searchItem"}} />
+    {{global-button resetSearch=(action "resetSearch") label="Reset Search" customclass="search-item-btn button" }}
+  </div>
   <div class="title-container">
     <h4>Todo List</h4>
     <ul onclick={{action "sortList"}}>
       <li><b>Sort By:</b></li>
-      <li data-action="showDataInReverse">ID |</li>
+      <li data-action="showListData">ID |</li>
       <li data-action="sortByTitle">Title |</li>
       <li data-action="sortByStatusPending">Pending |</li>
       <li data-action="sortByStatusCompleted">Completed</li>

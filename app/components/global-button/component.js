@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     },
     removeItem(){
       this.removeTodo();
+    },
+    resetSearchData(){
+      this.resetSearch()
     }
   },
 });

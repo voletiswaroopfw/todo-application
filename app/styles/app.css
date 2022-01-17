@@ -4,6 +4,14 @@
   font-family: sans-serif;
   font-size: 14px;
 }
+.button {
+  border: 0;
+  padding: 10px 60px;
+  background: #105aff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .todo-wrapper {
   background-color: #f4f2f3;
   padding: 30px;
@@ -48,17 +56,20 @@
 }
 
 .add-item {
-  padding: 10px 60px;
-  background: #105aff;
-  color: #fff;
-  border-radius: 5px;
   margin-left: 20px;
-  cursor: pointer;
 }
 select {
   width: 150px;
   height: 38px;
   margin-left: 20px;
+}
+.search-todo {
+  width: 30vw;
+  margin-right: 1vw;
+}
+.seach-item {
+  display: flex;
+  padding: 20px 20px 0;
 }
 .title-container li {
   list-style: none;
@@ -112,12 +123,9 @@ select {
   display: inline-block;
 }
 .footer-tabs li a {
-  padding: 10px 60px;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
   text-decoration: none;
   color: inherit;
+  background: transparent;
 }
 .footer-tabs li .selected {
   background: #105aff;

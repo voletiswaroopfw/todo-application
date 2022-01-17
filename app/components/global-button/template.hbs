@@ -5,3 +5,7 @@
 {{#if removeTodo}}
   <button class={{customclass}} onclick={{action "removeItem"}}>{{label}}</button>
 {{/if}}
+
+{{#if resetSearch}}
+  <button class={{customclass}} onclick={{action "resetSearchData"}}>{{label}}</button>
+{{/if}}

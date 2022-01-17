@@ -1,7 +1,16 @@
 # Todo-application
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This TODO application comes with many features such as
+* Listing the items from JSON.
+* Able to add new items into the list with required status (true/false).
+* Able to delete the newly added list.
+* Toggle all items to complete/pending.
+* Able to show list of pending items count.
+* Able to search todo items by title.
+* Able to sort todo items by: 
+* * Sort by ID
+* * Sort by Alpha
+* * Sort by Status (Pending and Completed)
 
 ## Prerequisites
 
