@@ -8,9 +8,9 @@ This TODO application comes with many features such as
 * Able to show list of pending items count.
 * Able to search todo items by title.
 * Able to sort todo items by: 
-* * Sort by ID
-* * Sort by Alpha
-* * Sort by Status (Pending and Completed)
+  * Sort by ID
+  * Sort by Alpha
+  * Sort by Status (Pending and Completed)
 
 ## Prerequisites
 
