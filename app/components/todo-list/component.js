@@ -2,37 +2,36 @@ import Ember from "ember";
 const { set, getProperties, setProperties, computed, get } = Ember;
 
 export default Ember.Component.extend({
-  modelData: computed("model.@each.id", {
+  modelData: computed("model.[]", {
     get() {
       return get(this, "model").toArray().reverse();
     },
   }),
-
-  markEveryItemsCompleted: computed("model.@each.completed", {
+  markEveryItemsCompleted: computed("model.[]", {
     get() {
       return get(this, "model").isEvery("completed");
     },
   }),
 
-  showListData: computed("model.@each.id", {
+  showListData: computed("model.[]", {
     get() {
       return get(this, "model").toArray();
     },
   }),
 
-  sortByTitle: computed("model.@each.title", {
+  sortByTitle: computed("model.[]", {
     get() {
       return get(this, "model").toArray().sortBy("title");
     },
   }),
 
-  sortByStatusPending: computed("model.@each.completed", {
+  sortByStatusPending: computed("model.[]", {
     get() {
       return get(this, "model").toArray().sortBy("completed");
     },
   }),
 
-  sortByStatusCompleted: computed("model.@each.completed", {
+  sortByStatusCompleted: computed("model.[]", {
     get() {
       return get(this, "model").toArray().sortBy("completed").reverse();
     },
