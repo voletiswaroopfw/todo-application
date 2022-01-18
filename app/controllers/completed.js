@@ -1,10 +1,6 @@
 import Ember from "ember";
-const { get, computed } = Ember;
+const { computed } = Ember;
 
 export default Ember.Controller.extend({
-  todos: computed("model.@each.completed", {
-    get() {
-      return get(this, "model").filterBy("completed", true);
-    },
-  }),
+  todos: computed.filterBy('model', 'completed', true)
 });
