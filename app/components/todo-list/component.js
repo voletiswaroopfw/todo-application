@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     },
   }),
   
-  markEveryItemsCompleted: computed("model.[]", {
+  markEveryItemsCompleted: computed("model.@each.completed", {
     get() {
       return get(this, "model").isEvery("completed");
     },
