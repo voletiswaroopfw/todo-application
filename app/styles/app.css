@@ -134,3 +134,10 @@ select {
   background: #105aff;
   color: #fff;
 }
+.align-center {
+  text-align: center;
+  padding: 20px;
+  display: block;
+  max-width: 1280px;
+  margin: auto;
+}
