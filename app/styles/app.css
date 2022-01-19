@@ -96,8 +96,11 @@ select {
   margin: 0 10px;
   border: 1px solid #ffccb3;
 }
-.list-item label {
+.list-item a {
   text-transform: capitalize;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .list-item.true label {
   text-decoration: line-through;

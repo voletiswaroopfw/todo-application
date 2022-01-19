@@ -11,6 +11,7 @@ This TODO application comes with many features such as
   * Sort by ID
   * Sort by Alpha
   * Sort by Status (Pending and Completed)
+* Onclick on the item it navigate to Item details page
 
 ## Prerequisites
 

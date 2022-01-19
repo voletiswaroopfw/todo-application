@@ -7,6 +7,7 @@ export default Ember.Component.extend({
       return get(this, "model").toArray().reverse();
     },
   }),
+  
   markEveryItemsCompleted: computed("model.[]", {
     get() {
       return get(this, "model").isEvery("completed");
@@ -58,10 +59,10 @@ export default Ember.Component.extend({
       if (e.keyCode === 13) {
         let data = [];
         get(this, "model").mapBy("title").forEach((i) => {
-            if (i.includes(e.target.value)) {
-              data.push(get(this, "model").toArray().filterBy("title", i)[0]);
-            }
-          });
+          if (i.includes(e.target.value)) {
+            data.pushObject(get(this, "model").toArray().filterBy("title", i)[0]);
+          }
+        });
         setProperties(this, { modelData: data });
         e.target.value = "";
       }
