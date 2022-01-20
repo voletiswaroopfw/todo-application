@@ -1,16 +1,16 @@
 <div class="footer-tabs">
   <ul class="filters">
     <li>
-      {{#link-to "index" (query-params items="all") activeClass="selected" class="button"}}All{{/link-to}}
+      {{#link-to (query-params items="all") activeClass="selected" class="button"}}All{{/link-to}}
     </li>
     <li>
-      {{#link-to "index" (query-params items="pending") activeClass="selected" class="button"}}Pending{{/link-to}}
+      {{#link-to (query-params items="pending") activeClass="selected" class="button"}}Pending{{/link-to}}
     </li>
     <li>
-      {{#link-to "index" (query-params items="completed")  activeClass="selected" class="button"}}Completed{{/link-to}}
+      {{#link-to (query-params items="completed")  activeClass="selected" class="button"}}Completed{{/link-to}}
     </li>
   </ul>
 </div>
 {{#if getPendingItemsCount}}
-  {{getPendingItemsCount}} Pending items
+  {{getPendingItemsCount}} items
 {{/if}}

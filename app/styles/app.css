@@ -141,3 +141,11 @@ select {
   max-width: 1280px;
   margin: auto;
 }
+.item-details{
+  text-transform: capitalize;
+  padding: 10px;
+  background: #fff;
+}
+.item-details h1{
+  margin-bottom: 10px;
+}

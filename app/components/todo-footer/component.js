@@ -4,8 +4,8 @@ const { get, computed } = Ember;
 export default Ember.Component.extend({
   getPendingItemsCount: computed("model.@each.completed", {
     get() {
-      let pending = get(this, "model").filterBy("completed", false).get("length");
-      return pending > 0 ? pending : false;
+      let itemsCount = get(this, "model").get("length");
+      return itemsCount > 0 ? itemsCount : false;
     },
   }),
 });

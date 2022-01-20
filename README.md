@@ -2,16 +2,20 @@
 
 This TODO application comes with many features such as
 * Listing the items from JSON.
+* End user able to switch between tabs:
+  * All.
+  * Pending.
+  * Completed.
 * Able to add new items into the list with required status (true/false).
 * Able to delete the newly added list.
 * Toggle all items to complete/pending.
-* Able to show list of pending items count.
+* Able to show list of items based on selected status.
 * Able to search todo items by title.
 * Able to sort todo items by: 
   * Sort by ID
   * Sort by Alpha
   * Sort by Status (Pending and Completed)
-* Onclick on the item it navigate to Item details page
+* Onclick on the item it shows Item details section
 
 ## Prerequisites
 
