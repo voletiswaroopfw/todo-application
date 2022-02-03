@@ -149,3 +149,14 @@ select {
 .item-details h1{
   margin-bottom: 10px;
 }
+.features-list{
+  margin:20px auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+.features-list li{
+  margin: 20px 20px 0 0;
+  list-style-position: inside;
+  float: left;
+}
+.features-list li input{margin-right: 5px;}
