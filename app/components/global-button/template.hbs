@@ -9,3 +9,7 @@
 {{#if resetSearch}}
   <button class={{customclass}} onclick={{action "resetSearchData"}}>{{label}}</button>
 {{/if}}
+
+{{#if saveSettings}}  
+  <button class={{customclass}} onclick={{action "saveAppSettings"}}>{{label}}</button>
+{{/if}}

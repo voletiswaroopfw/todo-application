@@ -10,6 +10,9 @@ export default Ember.Component.extend({
     },
     resetSearchData(){
       this.resetSearch()
+    },
+    saveAppSettings(){
+      this.saveSettings()
     }
   },
 });

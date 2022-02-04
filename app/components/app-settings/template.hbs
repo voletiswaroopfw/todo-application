@@ -1,0 +1,28 @@
+<div class="settings-wrapper">
+  <p>Enable/disable available features:</p>
+  <ul>
+    <li>
+      <input type="checkbox" checked="true" value="details" />
+      Selected item details</li>
+    <li>
+      <input type="checkbox" checked="true" value="state" />
+      State of new todo item</li>
+    <li>
+      <input type="checkbox" checked="true" value="search" />
+      Search</li>
+    <li>
+      <input type="checkbox" checked="true" value="sort" />
+      Sort</li>
+    <li>
+      <input type="checkbox" checked="true" value="toggle" />
+      Toggle items status</li>
+    <li>
+      <input type="checkbox" checked="true" value="count" />
+      Shows items count</li>
+  </ul>
+   {{global-button
+    saveSettings=(action "saveSettings")
+    label="Save"
+    customclass="add-item button"
+  }}
+</div>

@@ -100,6 +100,8 @@ select {
   text-transform: capitalize;
   text-decoration: none;
   color: inherit;
+}
+.list-item a label {
   cursor: pointer;
 }
 .list-item.true label {
@@ -134,29 +136,58 @@ select {
   background: #105aff;
   color: #fff;
 }
+nav {
+  padding: 20px 0 0;
+  max-width: 1280px;
+  margin: auto;
+  overflow: hidden;
+}
+nav .align-center {
+  max-width: auto;
+  float: left;
+  margin-right: 20px;
+}
 .align-center {
-  text-align: center;
   padding: 20px;
+  max-width: 1280px;
+  margin: auto;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: fantasy;
+  display: list-item;
+}
+.align-center.active {
   display: block;
+  text-decoration: underline;
+}
+.item-details {
+  text-transform: capitalize;
+  padding: 20px;
   max-width: 1280px;
   margin: auto;
 }
-.item-details{
-  text-transform: capitalize;
-  padding: 10px;
-  background: #fff;
-}
-.item-details h1{
+.item-details h1 {
   margin-bottom: 10px;
 }
-.features-list{
-  margin:20px auto;
+.features-list,
+.settings-wrapper {
+  margin: 20px auto;
   max-width: 1200px;
   overflow: hidden;
 }
-.features-list li{
+.features-list li,
+.settings-wrapper li {
   margin: 20px 20px 0 0;
   list-style-position: inside;
-  float: left;
+  font-family: fantasy;
 }
-.features-list li input{margin-right: 5px;}
+.settings-wrapper li input {
+  margin-right: 5px;
+}
+.settings-wrapper li {
+  list-style: none;
+}
+.settings-wrapper button{
+  margin-top: 30px;
+}

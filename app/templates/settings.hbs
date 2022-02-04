@@ -1,0 +1,10 @@
+<nav>
+  {{#link-to "index" class="align-center active"}}Home{{/link-to}}
+  {{#link-to
+    "todo-list"
+    (query-params items="all")
+    class="align-center active"
+  }}Todo List{{/link-to}}
+</nav>
+<p class="align-center" ><b>Note:</b> The page is under development</p>
+{{app-settings}}
