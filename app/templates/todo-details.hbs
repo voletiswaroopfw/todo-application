@@ -1,4 +1,11 @@
-{{#link-to "todo-list" (query-params items="all") class="align-center active"}}Todo List{{/link-to}}
+<nav>
+  {{#link-to "index" class="align-center active"}}Home{{/link-to}}
+  {{#link-to
+    "todo-list"
+    (query-params items="all")
+    class="align-center active"
+  }}Todo List{{/link-to}}
+</nav>
 <div class="item-details">
   <h1>Item Details</h1>
   <p><strong>Title:</strong> <label>{{model.title}}</label></p>
