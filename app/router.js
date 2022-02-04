@@ -7,8 +7,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('completed');
-  this.route('pending');
   this.route('todo-details', { path: '/todo-details/:item_id' });
 });
 

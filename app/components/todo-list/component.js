@@ -2,39 +2,16 @@ import Ember from "ember";
 const { set, getProperties, setProperties, computed, get } = Ember;
 
 export default Ember.Component.extend({
+  searchVal: null,
   modelData: computed("model.[]", {
     get() {
       return get(this, "model").toArray().reverse();
     },
   }),
-  
+
   markEveryItemsCompleted: computed("model.@each.completed", {
     get() {
       return get(this, "model").isEvery("completed");
-    },
-  }),
-
-  showListData: computed("model.[]", {
-    get() {
-      return get(this, "model").toArray();
-    },
-  }),
-
-  sortByTitle: computed("model.[]", {
-    get() {
-      return get(this, "model").toArray().sortBy("title");
-    },
-  }),
-
-  sortByStatusPending: computed("model.[]", {
-    get() {
-      return get(this, "model").toArray().sortBy("completed");
-    },
-  }),
-
-  sortByStatusCompleted: computed("model.[]", {
-    get() {
-      return get(this, "model").toArray().sortBy("completed").reverse();
     },
   }),
 
@@ -50,27 +27,31 @@ export default Ember.Component.extend({
       );
     },
 
-    sortList(e) {
-      let selectedSortData = get(this, e.target.getAttribute("data-action"));
+    sortList(type) {
+      let selectedSortData;
+      if (type === "id") {
+        selectedSortData = get(this, "model").toArray();
+      } else if (type === "title" || type === "completed") {
+        selectedSortData = get(this, "model").toArray().sortBy(type);
+      } else if (type === "pending") {
+        selectedSortData = get(this, "model")
+          .toArray()
+          .sortBy("completed")
+          .reverse();
+      }
       setProperties(this, { modelData: selectedSortData });
     },
 
-    searchItem(e) {
-      if (e.keyCode === 13) {
-        let data = [];
-        get(this, "model").mapBy("title").forEach((i) => {
-          if (i.includes(e.target.value)) {
-            data.pushObject(get(this, "model").toArray().filterBy("title", i)[0]);
-          }
-        });
-        setProperties(this, { modelData: data });
-        e.target.value = "";
-      }
+    searchItem() {
+      let modelData = get(this, "model").filter((todo) => {
+        return get(todo, "title").includes(this.get("searchVal"));
+      });
+      set(this, "modelData", modelData);
+      set(this, "searchVal", "");
     },
 
     resetSearch() {
-      let completeModelData = get(this, "showListData").reverse();
-      setProperties(this, { modelData: completeModelData });
+      setProperties(this, { modelData: get(this, "modelData") });
     },
   },
 });
