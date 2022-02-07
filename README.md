@@ -1,21 +1,26 @@
 # Todo-application
 
+This Todo application comes with 3 pages
+* Home
+* Features List
+* Settings page
+  * Settings page help end user to customize the application as per the requirements.
 This TODO application comes with many features such as
 * Listing the items from JSON.
-* End user able to switch between tabs:
+* End-user able to switch between tabs:
   * All.
   * Pending.
   * Completed.
-* Able to add new items into the list with required status (true/false).
+* Able to add new items into the list with respective status (Pending/Completed).
 * Able to delete the newly added list.
 * Toggle all items to complete/pending.
-* Able to show list of items based on selected status.
+* Able to show a list of items based on selected status.
 * Able to search todo items by title.
 * Able to sort todo items by: 
   * Sort by ID
   * Sort by Alpha
   * Sort by Status (Pending and Completed)
-* Onclick on the item it shows Item details section
+* Able to navigate to the item details page
 
 ## Prerequisites
 
@@ -60,4 +65,3 @@ Make use of the many generators for code, try `ember help generate` for more det
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
