@@ -3,6 +3,9 @@ const { set, getProperties, setProperties, computed, get } = Ember;
 
 export default Ember.Component.extend({
   searchVal: null,
+  showToggle: true,
+  showSearch: true,
+  showSort: true,
   modelData: computed("model.[]", {
     get() {
       return get(this, "model").toArray().reverse();
@@ -14,7 +17,13 @@ export default Ember.Component.extend({
       return get(this, "model").isEvery("completed");
     },
   }),
-
+  init() {
+    this._super(...arguments);
+    let settings = JSON.parse(localStorage.getItem("settings"));
+    setProperties(this, { showToggle: settings ? settings.toggle : showToggle });
+    setProperties(this, { showSearch: settings ? settings.search : showSearch });
+    setProperties(this, { showSort: settings ? settings.sort : showSort });
+  },
   actions: {
     toggleAll() {
       let { model, markEveryItemsCompleted } = getProperties(

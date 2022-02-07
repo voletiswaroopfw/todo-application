@@ -1,19 +1,22 @@
 <div class="create-todo-wrapper">
-  {{input
-    type="text"
-    id="new-todo"
-    placeholder="What needs to be done?"
-    value=addtodo
-  }}
+  {{#if showAddItem}}
+    {{input
+      type="text"
+      id="new-todo"
+      placeholder="What needs to be done?"
+      value=addtodo
+    }}
 
-  {{global-button
-    addItem=(action "addTodoItem")
-    label="Add"
-    customclass="add-item button"
-  }}
-  
-  <select onchange={{action "defaultNewItemValue"}} value={{selectedValue}}>
-    <option value="false">Pending</option>
-    <option value="true">Completed</option>
-  </select>
+    {{global-button
+      addItem=(action "addTodoItem")
+      label="Add"
+      customclass="add-item button"
+    }}
+    {{#if showAddItem }}
+      <select onchange={{action "defaultNewItemValue"}} value={{selectedValue}}>
+        <option value="false">Pending</option>
+        <option value="true">Completed</option>
+      </select>
+    {{/if}}
+  {{/if}}
 </div>

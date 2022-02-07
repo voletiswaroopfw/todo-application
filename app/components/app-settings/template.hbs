@@ -2,22 +2,25 @@
   <p>Enable/disable available features:</p>
   <ul>
     <li>
-      <input type="checkbox" checked="true" value="details" />
-      Selected item details</li>
+      <input type="checkbox" checked={{newItem}} onchange={{action "updateSetting" "newItem"}}/>
+      Add new item</li>
     <li>
-      <input type="checkbox" checked="true" value="state" />
-      State of new todo item</li>
+      <input type="checkbox" checked={{details}} onchange={{action "updateSetting" "details"}}/>
+      Details page</li>
     <li>
-      <input type="checkbox" checked="true" value="search" />
+      <input type="checkbox" checked={{status}} onchange={{action "updateSetting" "status"}} />
+      New todo item status</li>
+    <li>
+      <input type="checkbox" checked={{search}} onchange={{action "updateSetting" "search"}} />
       Search</li>
     <li>
-      <input type="checkbox" checked="true" value="sort" />
+      <input type="checkbox" checked={{sort}} onchange={{action "updateSetting" "sort"}} />
       Sort</li>
     <li>
-      <input type="checkbox" checked="true" value="toggle" />
+      <input type="checkbox" checked={{toggle}} onchange={{action "updateSetting" "toggle"}} />
       Toggle items status</li>
     <li>
-      <input type="checkbox" checked="true" value="count" />
+      <input type="checkbox" checked={{count}} onchange={{action "updateSetting" "count"}} />
       Shows items count</li>
   </ul>
    {{global-button

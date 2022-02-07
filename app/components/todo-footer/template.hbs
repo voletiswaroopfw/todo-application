@@ -11,6 +11,8 @@
     </li>
   </ul>
 </div>
-{{#if getPendingItemsCount}}
-  {{getPendingItemsCount}} items
+{{#if showItemsCount}}
+  {{#if getPendingItemsCount}}
+    {{getPendingItemsCount}} items
+  {{/if}}
 {{/if}}

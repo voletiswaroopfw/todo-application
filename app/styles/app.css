@@ -21,6 +21,7 @@
 .create-todo-wrapper {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 #new-todo {
@@ -31,7 +32,6 @@
 
 .todo-container {
   background: #fff;
-  margin: 30px 0 15px;
   max-height: 325px;
   overflow-y: auto;
 }

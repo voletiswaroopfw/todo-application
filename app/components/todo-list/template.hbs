@@ -1,18 +1,24 @@
 <div class="todo-container">
-  <div class="seach-item">
-    {{input type="text" class="search-todo" placeholder="Search todo" value=searchVal action= "searchItem" }}  
-    {{global-button resetSearch=(action "resetSearch") label="Reset Search" customclass="search-item-btn button" }}
-  </div>
+  {{#if showSearch}}
+    <div class="seach-item">
+      {{input type="text" class="search-todo" placeholder="Search todo" value=searchVal action= "searchItem" }}  
+      {{global-button resetSearch=(action "resetSearch") label="Reset Search" customclass="search-item-btn button" }}
+    </div>
+  {{/if}}
   <div class="title-container">
     <h4>Todo List</h4>
-    <ul>
-      <li><b>Sort By:</b></li>
-      <li data-action="showListData" onclick={{action "sortList" "id"}}>ID |</li>
-      <li data-action="sortByTitle" onclick={{action "sortList" "title"}}>Title |</li>
-      <li data-action="sortByStatusPending" onclick={{action "sortList" "completed"}}>Pending |</li>
-      <li data-action="sortByStatusCompleted" onclick={{action "sortList" "pending"}}>Completed</li>
-    </ul>
-    <p><input type="checkbox" onchange={{action "toggleAll"}} /> Toggle all</p>
+    {{#if showSort}}
+      <ul>
+        <li><b>Sort By:</b></li>
+        <li data-action="showListData" onclick={{action "sortList" "id"}}>ID |</li>
+        <li data-action="sortByTitle" onclick={{action "sortList" "title"}}>Title |</li>
+        <li data-action="sortByStatusPending" onclick={{action "sortList" "completed"}}>Pending |</li>
+        <li data-action="sortByStatusCompleted" onclick={{action "sortList" "pending"}}>Completed</li>
+      </ul>
+    {{/if}}
+    {{#if showToggle}}
+      <p><input type="checkbox" onchange={{action "toggleAll"}} /> Toggle all</p>
+    {{/if}}
   </div>
   <ul class="todo-list">
     {{#each modelData as |item|}}

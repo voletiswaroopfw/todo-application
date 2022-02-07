@@ -1,7 +1,11 @@
 <div class="item-label {{item.completed}}">
   <input type="checkbox" checked={{item.completed}} onchange={{action "toggleCompleted"}} />
   <span class="identifier"></span>
-  {{#link-to "todo-details" item.id}}<label>{{item.title}}</label>{{/link-to}}
+  {{#if showDetailsPage}}
+    {{#link-to "todo-details" item.id}}<label>{{item.title}}</label>{{/link-to}}
+  {{else}}
+    <label>{{item.title}}</label>
+  {{/if}}
 </div>
 
 {{global-button removeTodo=(action "removeTodo" item) label="Delete" customclass="remove-item"}}
